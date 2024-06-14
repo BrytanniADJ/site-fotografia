@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: nunito, sans-serif;
+    color: #1c1c1c;
+}
+h1, h2, h3{
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+.botao{
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #191970;
+    font-size: 0.9em;
+    border-radius: 20px;
+}
+.botao:hover{
+    background-color: #61c5fe;
+    color: black
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #191970;
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+        font-size: 32px;
+        font-family: YellowTail, serif;
+    }
+    ul{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        li{
+            text-align: center;
+            width: 100%;
+            a{
+                display: inline-block;
+                padding: 10px 0;
+                width: 100%;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/camera.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    h1{
+        color: white;
+    }
+    p{
+        margin-bottom: 2em;
+    }
+}
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 20px 20px;
+    background-color: #191970;
+    color: white;
+    h2{
+        color: white;
+    }
+    p{
+        margin-bottom: 2.5em;
+        max-width: 1000px;
+    }
+    .botao{
+        background-color: #f1f1f1;
+        color: #1c1c1c;
+    }
+}
+
+#servicos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+#fotos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    h2{
+        margin-bottom: 20px;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    h2{
+        color: black;
+    }
+}
+
+footer{
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #191970;
+    color: white;
+    height: 10vw;
+    a{
+        text-decoration: none;
+        color: #0fffff;
+        margin-top: 20px;
+    }
+    p{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    nav{
+        flex-direction: row;
+        justify-content: space-around;
+        ul{
+            flex-direction: row;
+            width: 70%
+        }
+    }
+
+    header{
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+
+    #sobre{
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px;
+    }
+
+    #servicos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+        h2{
+            text-align: center;
+            width: 100%;
+        }
+        div{
+            flex-grow: 1;
+            flex-basis: 150px;
+            padding: 0 10px;
+        }
+    }
+
+    #fotos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        h2{
+            width: 100%;
+            text-align: center;
+        }
+        img{
+            width: 33.33%;
+        }
+    }
+
+    #contato{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+        h2, p{
+            width: 100%;
+        }
+    }
+}
